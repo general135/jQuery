@@ -5,19 +5,19 @@
     background-color: lightgray;
 }
 
-#spring {
+#first {
     display: inline-block;
 }
 
 
-#summer {
+#second {
     display: inline-block;
 }
 
-#autumn {
+#third {
     display: inline-block;
 }
 
-#winter {
+#fourth {
     display: inline-block;
 }
