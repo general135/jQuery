@@ -2,6 +2,8 @@ $(document).ready(() => {
   let $pictures = $(".svg");
   $pictures.hide();
 
+    //add hover function so that when mouse hovers over the boxes, it shows a singular svg
+
   let $button = $("#button");
     $button.on({
         click: () => {
