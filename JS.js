@@ -3,35 +3,33 @@ $(document).ready(() => {
   let $pictures = $(".svg");
   $pictures.hide();
 
-  $("#button").click(() => {
-    let $name = $("#text").val();
-    showSeason($name);
-  });
+let $button = $("#button");
 
-  $pictures.on({
-    mouseenter: () => {
-      $pictures.show();
-  }
-});
+$button.on({
+    click: () => {
+      showSeason();
+    }
+  });
 
 });
 
 function showSeason() {
-    let $spring = $(".spring");
-    let $summer = $(".summer");
-    let $autumn = $(".autumn");
-    let $winter = $(".winter");
-    let $name = "";
+    let $name = $("#text").val();
     if ( $name == "spring" || $name == "Spring" ) {
+        let $spring = $(".spring");
         $spring.show();
     }
     if ($name == "summer" || $name == "Summer") {
+        let $summer = $(".summer");
         $summer.show();
     }
     if ($name == "autumn" || $name == "Autumn" || $name == "fall" || $name == "Fall") {
+        let $autumn = $(".autumn");
         $autumn.show();
     }
     if ( $name == "winter" || $name == "Winter") {
+        let $winter = $(".winter");
         $winter.show();
     }
 }
+
