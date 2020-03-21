@@ -5,6 +5,13 @@ $(document).ready(() => {
 
 let $button = $("#button");
 let $name = $("#text").val();
+let $buttontwo = $("#buttontwo");
+
+$buttontwo.on({
+    click: () => {
+        $pictures.show();
+    }
+  });
 
 $button.on({
     click: () => {
@@ -37,7 +44,7 @@ $button.on({
         let $autumn1 = $("#autumn1");
         let $autumn2 = $("#autumn2");
         let $autumn3 = $("#autumn3");
-    if ($name=="autumn" || $name=="autumn" || $name=="fall" || $name=="Fall"){
+    if ($name=="autumn" || $name=="Autumn" || $name=="fall" || $name=="Fall"){
         $autumn1.show();
         $autumn2.show();
         $autumn3.show();
