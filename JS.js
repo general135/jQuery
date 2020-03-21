@@ -1,33 +1,37 @@
 $(document).ready(() => {
+
   let $pictures = $(".svg");
   $pictures.hide();
 
-    //add hover function so that when mouse hovers over the boxes, it shows a singular svg
+  $("#button").click(() => {
+    let $name = $("#text").val();
+    showSeason($name);
+  });
 
-  let $button = $("#button");
-    $button.on({
-        click: () => {
-            showSeason(val);
-        }
-    });
+  $pictures.on({
+    mouseenter: () => {
+      $pictures.show();
+  }
 });
 
-function showSeason(val){
-    let $name = $("#type");
-    if ($name.text(val)= "spring" ) {
-        let $spring = $(".spring");
+});
+
+function showSeason() {
+    let $spring = $(".spring");
+    let $summer = $(".summer");
+    let $autumn = $(".autumn");
+    let $winter = $(".winter");
+    let $name = "";
+    if ( $name == "spring" || $name == "Spring" ) {
         $spring.show();
     }
-    if ($name.text(val)= "summer" ) {
-        let $summer = $(".summer");
+    if ($name == "summer" || $name == "Summer") {
         $summer.show();
     }
-    if ($name.text(val)= "autumn" ) {
-        let $autumn = $(".autumn");
+    if ($name == "autumn" || $name == "Autumn" || $name == "fall" || $name == "Fall") {
         $autumn.show();
     }
-    if ($name.text(val)= "winter" ) {
-        let $winter = $(".winter");
+    if ( $name == "winter" || $name == "Winter") {
         $winter.show();
     }
 }
